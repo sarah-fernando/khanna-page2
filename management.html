@@ -14,23 +14,122 @@
       --card: #ffffff;
       --border: #e8e8e8;
     }
-
     html, body { margin:0; padding:0; background: var(--sand); color: var(--ink); }
     body { font-family: Inter, Arial, Helvetica, sans-serif; line-height: 1.6; }
-
     header { padding: 28px 20px 22px; border-bottom: 2px solid var(--sage); background: var(--card); }
     .brand { font-family: Georgia, "Times New Roman", serif; font-size: 30px; letter-spacing: .4px; }
     .brand em { color: var(--leaf); font-style: italic; }
     .tagline { color: var(--muted); font-size: 15px; margin-top: 6px; }
-
     main { max-width: 980px; margin: 0 auto; padding: 28px 20px 32px; }
-
     h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; margin: 16px 0 8px; }
-    h1 { font-size: 26px; }
-    h2 { font-size: 20px; }
-    h3 { font-size: 18px; }
-
+    h1 { font-size: 26px; } h2 { font-size: 20px; } h3 { font-size: 18px; }
     .lead { font-size: 18px; margin-bottom: 14px; }
-
     .pills { display:flex; flex-wrap:wrap; gap: 12px 14px; margin: 8px 0 18px; }
-    .pill { display:inline-block; padding: 7px 12px; border-radius: 999px; background: #e9f3ea; color: var(--leaf); fo
+    .pill { display:inline-block; padding: 7px 12px; border-radius: 999px; background: #e9f3ea; color: var(--leaf); font-size: 12px; font-weight: 600; letter-spacing:.2px; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 6px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
+    .role { font-weight: bold; }
+    .muted { color: var(--muted); }
+    .small { font-size: 12px; } .big { font-size: 18px; }
+    .serif { font-family: Georgia, "Times New Roman", serif; }
+    .picwrap { aspect-ratio: 16/10; background: #eef4ef; border-radius: 12px; display:flex; align-items:center; justify-content:center; overflow:hidden; margin-bottom: 12px; }
+    .picwrap img { width:100%; height:100%; object-fit:cover; }
+    .lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 24px; margin-top: 8px; }
+    .footer { border-top: 1px solid var(--border); background: var(--card); padding: 14px 20px; }
+    a { color: var(--leaf); }
+    .btn { display:inline-block; padding: 9px 14px; border: 1px solid var(--leaf); border-radius: 12px; text-decoration: none; }
+    .underline { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">KHANNA <em>Healthy Catering Services</em></div>
+    <div class="tagline">Healthy catering for every occasion.</div>
+  </header>
+
+  <main>
+    <section>
+      <h1 class="serif">Leadership</h1>
+      <p class="lead">
+        Our leadership ensures disciplined execution, food safety compliance, and on-time delivery while crafting
+        <span class="big">healthy</span>, seasonal menus that customers love.
+      </p>
+      <div class="pills">
+        <span class="pill">ServSafe Certified</span>
+        <span class="pill">Local Sourcing</span>
+        <span class="pill">Eco Packaging</span>
+      </div>
+    </section>
+
+    <!-- Upload mira.jpg & jonah.jpg to the repo root -->
+    <section class="cards" aria-label="management-profiles">
+      <article class="card">
+        <div class="picwrap">
+          <img src="mira.jpg" alt="Photo of Mira Patel">
+        </div>
+        <h3 class="serif">Mira Patel</h3>
+        <div class="role">VP, Operations</div>
+        <p class="muted">Owns daily ops, vendor relationships, and cold-chain logistics.</p>
+        <ul>
+          <li>Builds SOPs for prep &amp; delivery</li>
+          <li>Negotiates farm-direct pricing</li>
+          <li>Tracks KPIs: waste, OTD, CSAT</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="picwrap">
+          <img src="jonah.jpg" alt="Photo of Jonah Reyes">
+        </div>
+        <h3 class="serif">Jonah Reyes</h3>
+        <div class="role">Director of Culinary &amp; Nutrition</div>
+        <p class="muted"><em>Designs</em> seasonal menus; ensures balanced macros &amp; allergen labeling.</p>
+        <ol>
+          <li>Weekly R&amp;D tasting</li>
+          <li>Nutrition review</li>
+          <li>Menu launch &amp; training</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="lists">
+      <div>
+        <h2>Leadership Principles</h2>
+        <ol>
+          <li><strong>Quality First:</strong> cold-chain integrity over shortcuts</li>
+          <li><strong>Nutrition by Design:</strong> flavor and macros</li>
+          <li><strong>Transparent Sourcing:</strong> traceable farms</li>
+        </ol>
+      </div>
+      <div>
+        <h2>Team Capabilities</h2>
+        <ul>
+          <li>Multi-site catering up to 500 guests</li>
+          <li>Dietary programs: vegan, GF, nut-free</li>
+          <li>On-time delivery SLAs &amp; live tracking</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Exactly 3 links (outside, download, email) -->
+    <section>
+      <h2>Links &amp; Contact</h2>
+      <p>Food-safety reference (U.S.):
+        <a href="https://www.fda.gov/food/retail-food-protection/fda-food-code" target="_blank" rel="noopener">FDA Food Code (Retail Food Protection)</a>
+      </p>
+      <p>Download our sample menu:
+        <a href="khaana-catering-menu.pdf" download class="btn">khaana-catering-menu.pdf</a>
+      </p>
+      <p>Questions? <a href="mailto:management.page@khanna.example?subject=KHANNA%20Management%20Page">Email the page creator</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="small muted">Date last modified: <span id="lastmod" class="underline"></span></div>
+  </footer>
+
+  <script>
+    document.getElementById('lastmod').textContent = document.lastModified;
+  </script>
+</body>
+</html>
