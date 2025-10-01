@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KHANNA · Healthy Catering Services</title>
+  <style>
+    :root {
+      --ink: #222222;
+      --muted: #747474;
+      --sand: #f6f6f5;
+      --leaf: #2e7d32;
+      --sage: #8fbf8f;
+    }
+    html, body { margin:0; padding:0; background: var(--sand); color: var(--ink); }
+    body { font-family: Inter, Arial, Helvetica, sans-serif; line-height: 1.6; }
+    header { padding: 24px 20px; border-bottom: 2px solid var(--sage); background: white; }
+    .brand { font-family: Georgia, "Times New Roman", serif; font-size: 28px; letter-spacing: 0.5px; }
+    .brand em { color: var(--leaf); font-style: italic; }
+    .tagline { color: var(--muted); font-size: 14px; }
+    main { max-width: 980px; margin: 0 auto; padding: 24px 20px; }
+    .pill { display:inline-block; padding: 6px 10px; border-radius: 999px; background: #e9f3ea; color: var(--leaf); font-size: 12px; margin-right: 8px; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; margin: 16px 0 8px; }
+    h1 { font-size: 26px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    .lead { font-size: 18px; }
+    .fine { font-size: 13px; color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .card { background: white; border: 1px solid #e8e8e8; border-radius: 14px; padding: 16px; }
+    .role { font-weight: bold; }
+    .underline { text-decoration: underline; }
+    .green { color: var(--leaf); }
+    .muted { color: var(--muted); }
+    .small { font-size: 12px; }
+    .big { font-size: 18px; }
+    .serif { font-family: Georgia, "Times New Roman", serif; }
+    .picwrap { aspect-ratio: 16/10; background: linear-gradient(135deg, #dfe8df, #ffffff); border-radius: 10px; display:flex; align-items:center; justify-content:center; }
+    .picwrap svg { width: 72px; height: 72px; }
+    .lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 20px; margin-top: 8px; }
+    .footer { border-top: 1px solid #e8e8e8; background: white; padding: 16px 20px; }
+    a { color: var(--leaf); }
+    .btn { display:inline-block; padding: 8px 12px; border: 1px solid var(--leaf); border-radius: 12px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="underline">KHANNA</span> <em>Healthy Catering Services</em></div>
+    <div class="tagline">Neutral palette · pops of <span class="green">green</span> · whole-food menus</div>
+    <div class="small muted">Management Team</div>
+  </header>
+
+  <main>
+    <section>
+      <h1 class="serif">Leadership</h1>
+      <p class="lead">Our leadership ensures disciplined execution, food safety compliance, and on-time delivery while crafting <span class="big">healthy</span>, seasonal menus that guests love.</p>
+      <div class="pill">ServSafe Certified</div>
+      <div class="pill">Local Sourcing</div>
+      <div class="pill">Eco Packaging</div>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <div class="picwrap" role="img" aria-label="Abstract leaf emblem">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 40c14-20 34-26 48-24-2 14-8 34-24 48-4-10-10-16-24-24z" fill="#2e7d32"/>
+            <circle cx="36" cy="20" r="4" fill="#8fbf8f"/>
+          </svg>
+        </div>
+        <h3 class="serif">Mira Patel</h3>
+        <div class="role">VP, Operations</div>
+        <p class="muted">Owns daily ops, vendor relationships, and cold-chain logistics.</p>
+        <ul>
+          <li>Builds SOPs for prep & delivery</li>
+          <li>Negotiates farm-direct pricing</li>
+          <li>Tracks KPIs: waste, OTD, CSAT</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="picwrap" role="img" aria-label="Abstract leaf emblem">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 40c14-20 34-26 48-24-2 14-8 34-24 48-4-10-10-16-24-24z" fill="#2e7d32"/>
+            <circle cx="36" cy="20" r="4" fill="#8fbf8f"/>
+          </svg>
+        </div>
+        <h3 class="serif">Jonah Reyes</h3>
+        <div class="role">Director of Culinary & Nutrition</div>
+        <p class="muted"><em>Designs</em> seasonal menus; ensures balanced macros & allergen labeling.</p>
+        <ol>
+          <li>Weekly R&D tasting</li>
+          <li>Nutrition review</li>
+          <li>Menu launch & training</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="lists">
+      <div>
+        <h2>Leadership Principles</h2>
+        <ol>
+          <li><strong>Quality First</strong> — cold-chain integrity over shortcuts</li>
+          <li><u>Nutrition by Design</u> — flavor + macros</li>
+          <li>Transparent Sourcing — traceable farms</li>
+        </ol>
+      </div>
+      <div>
+        <h2>Team Capabilities</h2>
+        <ul>
+          <li>Multi-site catering up to 500 covers</li>
+          <li>Dietary programs: vegan, GF, nut-free</li>
+          <li>On-time delivery SLAs &amp; live tracking</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Links & Contact</h2>
+      <p class="small">Limit 3 hyperlinks total on page (incl. email & download).</p>
+      <p>Healthy standards we align with:
+        <a href="https://www.w3schools.com/accessibility/" target="_blank" rel="noopener">Food safety & accessibility guidance</a>
+      </p>
+      <p>Download our sample menu:
+        <a href="khaana-catering-menu.txt" download class="btn">khaana-catering-menu.txt</a>
+      </p>
+      <p>Questions? <a href="mailto:management.page@khanna.example?subject=KHANNA%20Management%20Page">Email the page creator</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="fine">Date last modified: <span id="lastmod"></span></div>
+  </footer>
+
+  <script>
+    document.getElementById('lastmod').textContent = document.lastModified;
+  </script>
+</body>
+</html>
