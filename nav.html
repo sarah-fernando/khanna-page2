@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>KHANNA · Navigation</title>
+  <style>
+    :root { --ink:#222; --leaf:#2e7d32; --muted:#666; --bg:#f6f6f5; }
+    html,body { margin:0; font-family: Arial, Helvetica, sans-serif; background:var(--bg); color:var(--ink); }
+    .brand { padding:16px 14px; border-bottom:1px solid #ddd; }
+    .brand h1 { margin:0 0 4px; font:700 18px/1.2 Georgia, 'Times New Roman', serif; letter-spacing:.03em; }
+    .brand small { color:var(--muted); }
+    nav { padding:10px; }
+    a { display:block; padding:8px 10px; margin:6px 0; text-decoration:none; color:var(--ink); border-radius:8px; }
+    a:hover { background:#eaf3ec; color:var(--leaf); }
+    .section { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:14px 8px 6px; }
+    footer { position:sticky; bottom:0; padding:10px; font-size:12px; color:var(--muted); border-top:1px solid #ddd; background:#fff; }
+    .date { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  </style>
+</head>
+<body>
+  <div class="brand">
+    <h1>KHANNA</h1>
+    <small>Healthy Catering Services</small>
+  </div>
+
+  <nav>
+    <div class="section">Team</div>
+    <a href="team_home.html" target="content">Team Home</a>
+
+    <div class="section">Pages</div>
+    <!-- These two exist in your repo root today -->
+    <a href="management.html" target="content">A management team page</a>
+    <a href="services.html" target="content">A company services page</a>
+
+    <!-- Placeholders for teammates (create later at repo root or change paths later) -->
+    <a href="story.html" target="content">A company story and history page</a>
+    <a href="products.html" target="content">A company products page</a>
+    <a href="testimonials.html" target="content">A customer testimonials page</a>
+  </nav>
+
+  <footer>
+    Last modified: <span class="date" id="lastmod"></span>
+  </footer>
+
+  <script>
+    document.getElementById('lastmod').textContent =
+      new Date(document.lastModified).toLocaleString();
+  </script>
+</body>
+</html>
