@@ -4,17 +4,50 @@
   <meta charset="utf-8" />
   <title>KHANNA · Navigation</title>
   <style>
-    :root { --ink:#222; --leaf:#2e7d32; --muted:#666; --bg:#f6f6f5; }
-    html,body { margin:0; font-family: Arial, Helvetica, sans-serif; background:var(--bg); color:var(--ink); }
-    .brand { padding:16px 14px; border-bottom:1px solid #ddd; }
-    .brand h1 { margin:0 0 4px; font:700 18px/1.2 Georgia, 'Times New Roman', serif; letter-spacing:.03em; }
+    :root {
+      --ink:#222; --muted:#6b7280; --leaf:#2e7d32; --bg:#f6f6f5;
+      --card:#ffffff; --border:#e5e7eb;
+    }
+
+    
+    html, body { height:100%; }
+    html { background:var(--bg); }
+    body {
+      margin:0; height:100vh; display:flex; flex-direction:column;
+      font-family: Arial, Helvetica, sans-serif; color:var(--ink);
+      background:var(--card); border-right:1px solid var(--border);
+    }
+
+    
+    .brand {
+      padding:18px 16px; border-bottom:1px solid var(--border);
+    }
+    .brand h1 {
+      margin:0 0 4px; font:700 18px/1.2 Georgia, "Times New Roman", serif; letter-spacing:.02em;
+    }
     .brand small { color:var(--muted); }
-    nav { padding:10px; }
-    a { display:block; padding:8px 10px; margin:6px 0; text-decoration:none; color:var(--ink); border-radius:8px; }
-    a:hover { background:#eaf3ec; color:var(--leaf); }
-    .section { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:14px 8px 6px; }
-    footer { position:sticky; bottom:0; padding:10px; font-size:12px; color:var(--muted); border-top:1px solid #ddd; background:#fff; }
-    .date { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+
+    
+    .navwrap { padding:10px 10px 4px; overflow:auto; }
+    .section {
+      margin:16px 8px 6px; font-size:11px; text-transform:uppercase;
+      letter-spacing:.08em; color:var(--muted);
+    }
+    .list { list-style:none; margin:0; padding:0; }
+    .link {
+      display:block; padding:10px 12px; margin:4px 6px;
+      text-decoration:none; color:var(--ink); border-radius:10px;
+      transition:background .15s ease, color .15s ease;
+    }
+    .link:hover { background:#eef7ef; color:var(--leaf); }
+    .link.active { background:rgba(46,125,50,.10); color:var(--leaf); font-weight:600; }
+
+   
+    footer {
+      margin-top:auto; border-top:1px solid var(--border);
+      padding:10px 12px; font-size:12px; color:var(--muted); background:var(--card);
+    }
+    .mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
   </style>
 </head>
 <body>
@@ -23,27 +56,47 @@
     <small>Healthy Catering Services</small>
   </div>
 
-  <nav>
+  <div class="navwrap">
     <div class="section">Team</div>
-    <a href="team_home.html" target="content">Team Home</a>
+    <ul class="list">
+      <li><a class="link" href="team_home.html" target="content">Team Home</a></li>
+    </ul>
 
     <div class="section">Pages</div>
-    <!-- These two exist in your repo root today -->
-    <a href="management.html" target="content">A management team page</a>
-    <a href="services.html" target="content">A company services page</a>
-
-    <!-- Placeholders for teammates (create later at repo root or change paths later) -->
-    <a href="story.html" target="content">A company story and history page</a>
-    <a href="products.html" target="content">A company products page</a>
-    <a href="testimonials.html" target="content">A customer testimonials page</a>
-  </nav>
+    <ul class="list">
+     
+      <li><a class="link" href="story.html"        target="content">Company Story &amp; History</a></li>
+      <li><a class="link" href="management.html"   target="content">Management Team</a></li>
+      <li><a class="link" href="products.html"     target="content">Products</a></li>
+      <li><a class="link" href="services.html"     target="content">Services</a></li>
+      <li><a class="link" href="testimonials.html" target="content">Customer Testimonials</a></li>
+    </ul>
+  </div>
 
   <footer>
-    Last modified: <span class="date" id="lastmod"></span>
+    Last modified: <span id="lastmod" class="mono"></span>
   </footer>
 
   <script>
-    document.getElementById('lastmod').textContent =
+    
+    const map = {
+      "story.html":"Company Story & History",
+      "management.html":"Management Team",
+      "products.html":"Products",
+      "services.html":"Services",
+      "testimonials.html":"Customer Testimonials",
+      "team_home.html":"Team Home"
+    };
+    const file = (location.pathname.split("/").pop() || "").toLowerCase();
+    const label = map[file];
+    if (label) {
+      const link = [...document.querySelectorAll(".link")]
+        .find(a => a.textContent.trim() === label);
+      if (link) link.classList.add("active");
+    }
+
+    // Last modified pinned at bottom
+    document.getElementById("lastmod").textContent =
       new Date(document.lastModified).toLocaleString();
   </script>
 </body>
