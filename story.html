@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KHAANA · Our Story</title>
+  <style>
+    :root {
+      --ink: #222222;
+      --muted: #747474;
+      --sand: #f6f6f5;
+      --leaf: #2e7d32;
+      --sage: #8fbf8f;
+      --card: #ffffff;
+      --border: #e8e8e8;
+    }
+
+    html, body { margin:0; padding:0; background: var(--sand); color: var(--ink); }
+    body { font-family: Inter, Arial, Helvetica, sans-serif; line-height: 1.6; }
+
+    header {
+      padding: 28px 20px 22px;
+      border-bottom: 2px solid var(--sage);
+      background: var(--card);
+      text-align: center;
+    }
+
+    .brand { font-family: Georgia, "Times New Roman", serif; font-size: 30px; letter-spacing: .4px; }
+    .brand em { color: var(--leaf); font-style: italic; }
+    .tagline { color: var(--muted); font-size: 15px; margin-top: 6px; }
+
+    main { max-width: 900px; margin: 0 auto; padding: 28px 20px 32px; }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      margin: 16px 0 8px;
+    }
+    h1 { font-size: 26px; }
+    h2 { font-size: 20px; }
+
+    .lead { font-size: 18px; margin-bottom: 14px; }
+
+    .highlight { color: var(--leaf); font-style: italic; }
+    .secondary-text { color: orangered; font-weight: bold; font-family: Courier, monospace; }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 12px;
+    }
+
+    .history {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--leaf);
+      padding: 20px;
+      margin: 24px 0;
+      border-radius: 10px;
+      font-family: Georgia, serif;
+    }
+
+    .graphics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin: 28px 0;
+    }
+    .graphics img {
+      width: 120px;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #eef4ef;
+      padding: 8px;
+    }
+
+    a { color: var(--leaf); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--card);
+      padding: 14px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">KHAANA <em>Our Story</em></div>
+    <div class="tagline">Healthy catering for every occasion.</div>
+  </header>
+
+  <main>
+    <h1>Our Story</h1>
+    <p class="lead">
+      At <b>KHAANA</b>, we believe that <i>food is more than fuel</i>. It’s a way to <u>connect communities</u>, share culture, and create memorable experiences.
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" 
+         alt="Healthy catering spread">
+
+    <div class="history">
+      <h2>Our History</h2>
+      <p>
+        Founded in <font color="red">2015</font> as a family-run kitchen, KHAANA started
+        serving small wellness events. With rising demand, we expanded to <b>weddings</b>, 
+        <i>corporate gatherings</i>, and large community festivals. 
+      </p>
+    </div>
+
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>Customizable healthy menus</li>
+      <li>Environmentaly friendly packaging</li>
+      <li>Flexible catering for all events</li>
+    </ul>
+
+    <h2>Popular Dishes</h2>
+    <ol>
+      <li>Quinoa & Veggie Bowls</li>
+      <li>Grilled Salmon with Seasonal Veggies</li>
+      <li>Fresh Fruit Platters</li>
+    </ol>
+
+    <div class="graphics">
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f957.svg" alt="Salad Icon">
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f969.svg" alt="Steak Icon">
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f372.svg" alt="Soup Icon">
+    </div>
+
+    <p>
+      Learn more about nutrition at 
+      <a href="https://www.eatright.org/" target="_blank" rel="noopener">EatRight.org</a>.
+    </p>
+    <p>
+      <a href="mailto:tshedd@gmail.com">Contact Me</a> for inquiries.
+    </p>
+    <p>
+      <a href="Khaana Family History.pdf" download class="btn">Learn More About Us</a>
+    </p>
+  </main>
+
+  <footer>
+    Date last modified: <span id="lastmod" class="underline"></span>
+  </footer>
+
+  <script>
+    document.getElementById('lastmod').textContent = document.lastModified;
+  </script>
+</body>
+</html>
